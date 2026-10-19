@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>نصب رستا روی گوشی و رایانه</title>
+<meta name="description" content="رستا — سامانه‌ی مدیریت کارهای گالری طلای رستا (نسخه‌ی نمایشی)">
+<meta name="theme-color" content="#820D1F">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="رستا">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preload" href="assets/fonts/Vazirmatn-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/app.css">
+<style>.pw{padding:48px;display:flex;flex-direction:column;gap:32px;background:var(--sunken);min-height:1900px}
+.icons{display:flex;gap:40px;align-items:flex-end;flex-wrap:wrap}
+.icon-c{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
+.appi{display:block;box-shadow:0 8px 20px rgba(9,30,66,.12),0 0 0 1px var(--line)}
+.mask{position:relative;width:150px;height:150px;border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+.mask-c{position:absolute;inset:15px;border-radius:50%;border:2px dashed #0C66E4}
+.hs-prev{width:150px;height:150px;border-radius:24px;background:linear-gradient(160deg,#0C66E4,#6E5DC6 60%,#AE4787);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#fff;font-size:12px}
+.sw-dot{width:20px;height:20px;border-radius:50%;display:block}
+.phones{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.ph-w{margin:0;display:flex;flex-direction:column;gap:14px;align-items:center}
+.ph{width:300px;height:620px;border-radius:44px;background:#101828;padding:10px;box-shadow:0 20px 40px rgba(9,30,66,.18)}
+.phs{width:100%;height:100%;border-radius:36px;overflow:hidden;background:var(--bg);position:relative;display:flex;flex-direction:column;padding-top:36px}
+.phs.splash{align-items:center;justify-content:center;gap:24px;padding-top:0}
+.spin{width:26px;height:26px;border-radius:50%;border:3px solid #E9F2FF;border-top-color:#0C66E4}
+.url{height:36px;margin:0 10px;border-radius:999px;background:var(--btn);display:flex;align-items:center;gap:8px;padding:0 12px;font-size:12px;color:var(--text2)}
+.shov{position:absolute;inset:0;background:var(--ov);display:flex;flex-direction:column;justify-content:flex-end}
+.shs{background:var(--card);border-radius:16px 16px 0 0;padding:6px 14px 20px;display:flex;flex-direction:column;gap:8px}
+.grab{width:34px;height:4px;border-radius:2px;background:var(--btnH);align-self:center;margin:4px 0}
+.ben{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text2)}.ben .ic{color:var(--blue)}
+.ios{display:flex;align-items:center;gap:8px;font-size:12px;line-height:1.6;background:var(--sunken);border-radius:8px;padding:8px}
+.ios-n{width:20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:11px;font-weight:700;flex:none}
+.ios-k{width:26px;height:26px;border-radius:6px;background:var(--blueS);color:var(--blue);display:grid;place-items:center;flex:none}
+.home{background:linear-gradient(160deg,#0C66E4,#6E5DC6 60%,#AE4787);padding:40px 18px 20px}
+.hg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px 10px}
+.hi{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:10px;color:#fff}.hi i{width:48px;height:48px;border-radius:12px;display:block;box-shadow:0 2px 6px rgba(0,0,0,.18)}.hi b{font-weight:600}
+.htoast{margin-top:auto;background:#172B4D;color:#fff;border-radius:8px;padding:10px 12px;font-size:12px;display:flex;align-items:center;gap:8px}
+.pab{height:48px;display:flex;align-items:center;gap:10px;padding:0 12px;border-bottom:1px solid var(--border);font-size:15px}
+.pcnt{flex:1;padding:12px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.pnav{height:60px;border-top:1px solid var(--border);display:flex;padding-bottom:10px}.pnav span{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:10px;color:var(--text2)}.pnav span.on{color:var(--blue);font-weight:600}
+.cap{display:flex;gap:10px;align-items:flex-start;max-width:320px;margin:0}
+.cap p{font-size:13px;color:var(--text2);line-height:1.8}
+.cap-n{width:26px;height:26px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px;flex:none}
+.desk{width:100%;height:620px;border-radius:12px;background:var(--bg);box-shadow:0 20px 40px rgba(9,30,66,.14),0 0 0 1px var(--line);overflow:hidden;position:relative;display:flex;flex-direction:column}
+.desk-top{height:52px;display:flex;align-items:center;gap:8px;padding:0 12px;border-bottom:1px solid var(--border)}
+.desk-b{flex:1;background:#0079BF;display:flex;gap:10px;padding:14px;align-items:flex-start}
+.dl{width:200px;background:var(--list);border-radius:12px;padding:10px;display:flex;flex-direction:column;gap:8px}
+.dc{height:56px;border-radius:8px;background:var(--card);box-shadow:var(--shCard);display:block}
+.dmenu{position:absolute;top:56px;left:12px;width:250px;background:var(--card);border-radius:8px;box-shadow:var(--shPop);padding:6px;display:flex;flex-direction:column;gap:2px}
+</style>
+</head>
+<body class="ui-page">
+<nav class="backbar"><a href="./"><svg class="ic" style="width:18px;height:18px" aria-hidden="true"><use href="#i-arrow-r"></use></svg>بازگشت به رستا</a></nav>
+<div class="tr" dir="rtl" lang="fa">
+<svg class="sprite" aria-hidden="true">
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .71-1.53l7-6a2 2 0 0 1 2.58 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></symbol>
+<symbol id="i-board" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M8 7v7M12 7v4M16 7v9"></path></symbol>
+<symbol id="i-review" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"></path></symbol>
+<symbol id="i-archive" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="5" rx="1"></rect><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8M10 12h4"></path></symbol>
+<symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></symbol>
+<symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M19 8v6M22 11h-6"></path></symbol>
+<symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16M18 17V9M13 17V5M8 17v-3"></path></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></symbol>
+<symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9 4.5 4h15L21 9M3 9h18M5 9v11h14V9M10 20v-5h4v5"></path></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></symbol>
+<symbol id="i-tg" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></symbol>
+<symbol id="i-bale" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></symbol>
+<symbol id="i-rub" viewBox="0 0 24 24"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"></path><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"></path></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"></path></symbol>
+<symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"></path></symbol>
+<symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"></path></symbol>
+<symbol id="i-clip" viewBox="0 0 24 24"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"></path></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"></path></symbol>
+<symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="4.5" width="4" height="15" rx="1"></rect><rect x="14" y="4.5" width="4" height="15" rx="1"></rect></symbol>
+<symbol id="i-pause-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M10 15V9M14 15V9"></path></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></symbol>
+<symbol id="i-check-c" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></symbol>
+<symbol id="i-check-sq" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="m9 12 2 2 4-4"></path></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"></path></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4M12 17h.01"></path></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></symbol>
+<symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></symbol>
+<symbol id="i-more" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></symbol>
+<symbol id="i-pen-sm" viewBox="0 0 24 24"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></symbol>
+<symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></symbol>
+<symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"></path></symbol>
+<symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></symbol>
+<symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></symbol>
+<symbol id="i-chev-d" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></symbol>
+<symbol id="i-chev-u" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"></path></symbol>
+<symbol id="i-move" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4"></path></symbol>
+<symbol id="i-undo" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></symbol>
+<symbol id="i-return" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"></path></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path></symbol>
+<symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="m4.9 4.9 14.2 14.2"></path></symbol>
+<symbol id="i-msg" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></symbol>
+<symbol id="i-desc" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h12"></path></symbol>
+<symbol id="i-act" viewBox="0 0 24 24"><path d="M3 6h18M3 12h12M3 18h7"></path></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 9h10M7 13h6"></path></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.59 2.59A2 2 0 0 0 11.17 2H4a2 2 0 0 0-2 2v7.17a2 2 0 0 0 .59 1.42l8.7 8.7a2.43 2.43 0 0 0 3.42 0l6.58-6.58a2.43 2.43 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" r=".5"></circle></symbol>
+<symbol id="i-filter" viewBox="0 0 24 24"><path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"></path></symbol>
+<symbol id="i-table" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M3 15h18M9 3v18"></path></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></symbol>
+<symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"></circle><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"></path></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></symbol>
+<symbol id="i-compare" viewBox="0 0 24 24"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><path d="M13 6h3a2 2 0 0 1 2 2v7M11 18H8a2 2 0 0 1-2-2V9"></path></symbol>
+<symbol id="i-wifi-off" viewBox="0 0 24 24"><path d="M12 20h.01M8.5 16.43a5 5 0 0 1 7 0M5 12.86a10 10 0 0 1 5.17-2.69M19 12.86a10 10 0 0 0-2-1.52M2 8.82a15 15 0 0 1 4.18-2.64M22 8.82a15 15 0 0 0-11.29-3.76M2 2l20 20"></path></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></symbol>
+<symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"></path></symbol>
+<symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></symbol>
+<symbol id="i-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"></rect><path d="M12 18h.01"></path></symbol>
+<symbol id="i-tools" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></symbol>
+<symbol id="i-layers" viewBox="0 0 24 24"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65M22 12.65l-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"></path></symbol>
+<symbol id="i-sms" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M8 10h.01M12 10h.01M16 10h.01"></path></symbol>
+<symbol id="i-sliders" viewBox="0 0 24 24"><path d="M21 4h-7M10 4H3M21 12h-9M8 12H3M21 20h-5M12 20H3M14 2v4M8 10v4M16 18v4"></path></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></symbol>
+<symbol id="i-report" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4M8 13h8M8 17h5"></path></symbol>
+<symbol id="i-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle></symbol>
+<symbol id="i-arrow-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></symbol>
+<symbol id="i-forward" viewBox="0 0 24 24"><path d="M5 4l10 8-10 8z"></path><path d="M19 5v14"></path></symbol>
+<symbol id="i-team" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"></circle><circle cx="5" cy="10" r="2"></circle><circle cx="19" cy="10" r="2"></circle><path d="M7 20v-1a5 5 0 0 1 10 0v1M2 19v-.5A3 3 0 0 1 5 15.5M22 19v-.5a3 3 0 0 0-3-3"></path></symbol>
+<symbol id="i-hourglass" viewBox="0 0 24 24"><path d="M5 22h14M5 2h14M17 22v-4.17a2 2 0 0 0-.59-1.42L12 12l-4.41 4.41A2 2 0 0 0 7 17.83V22M7 2v4.17a2 2 0 0 0 .59 1.42L12 12l4.41-4.41A2 2 0 0 0 17 6.17V2"></path></symbol>
+<symbol id="a-ring" viewBox="0 0 120 120"><path d="M30 78a30 30 0 1 0 60 0a30 30 0 1 0-60 0zM36 78a24 24 0 1 0 48 0a24 24 0 1 0-48 0z"></path><path d="M50 22h20l7 9-17 15-17-15z"></path><path d="M43 31h34M54 22l-3 9 9 15 9-15-3-9"></path><path d="M46 36l3 12M74 36l-3 12"></path></symbol>
+<symbol id="a-band" viewBox="0 0 120 120"><path d="M30 78a30 30 0 1 0 60 0a30 30 0 1 0-60 0zM37 78a23 23 0 1 0 46 0a23 23 0 1 0-46 0z"></path><path d="M44 40h32a7 7 0 0 1 7 7v7H37v-7a7 7 0 0 1 7-7z"></path><path d="M51 47a9 4 0 1 0 18 0a9 4 0 1 0-18 0z"></path></symbol>
+<symbol id="a-necklace" viewBox="0 0 120 120"><path d="M20 14c0 36 16 58 40 60c24-2 40-24 40-60"></path><path d="M28 14c0 31 13 50 32 52c19-2 32-21 32-52"></path><path d="M60 74l-9 13a11 11 0 1 0 18 0z"></path><path d="M60 83l-4 6 4 5 4-5z"></path></symbol>
+<symbol id="a-hoops" viewBox="0 0 120 120"><path d="M22 66a18 23 0 1 0 36 0a18 23 0 1 0-36 0zM27 66a13 18 0 1 0 26 0a13 18 0 1 0-26 0z"></path><path d="M62 66a18 23 0 1 0 36 0a18 23 0 1 0-36 0zM67 66a13 18 0 1 0 26 0a13 18 0 1 0-26 0z"></path><path d="M40 43v-12M80 43v-12"></path><path d="M37 28a3 3 0 1 0 6 0a3 3 0 1 0-6 0zM77 28a3 3 0 1 0 6 0a3 3 0 1 0-6 0z"></path></symbol>
+<symbol id="a-drops" viewBox="0 0 120 120"><path d="M40 18c-7 0-7 11 0 11v11M80 18c-7 0-7 11 0 11v11"></path><path d="M40 40l-11 20a11 11 0 1 0 22 0zM80 40l-11 20a11 11 0 1 0 22 0z"></path><path d="M40 56l-4 6 4 5 4-5zM80 56l-4 6 4 5 4-5z"></path></symbol>
+<symbol id="a-bracelet" viewBox="0 0 120 120"><path d="M14 58a46 22 0 1 0 92 0a46 22 0 1 0-92 0z"></path><path d="M20 58a40 17 0 1 0 80 0a40 17 0 1 0-80 0z"></path><path d="M40 72h40a8 8 0 0 1 0 16H40a8 8 0 0 1 0-16z"></path><path d="M47 81c3-5 5 3 8-1s4-4 6 0 4 2 6-2 3 2 6 0"></path></symbol>
+<symbol id="a-bangle" viewBox="0 0 120 120"><path d="M12 60a48 26 0 1 0 96 0a48 26 0 1 0-96 0zM20 60a40 19 0 1 0 80 0a40 19 0 1 0-80 0z"></path><path d="M30 81c3 4 7 4 9 0s6-4 9 0 6 4 9 0 6-4 9 0 6 4 9 0 6-4 9 0"></path><path d="M24 70c4 2 6-2 9 1M87 71c3-3 5 1 9-1"></path></symbol>
+<symbol id="a-coin" viewBox="0 0 120 120"><path d="M38 10l22 28 22-28"></path><path d="M55 38h10v7H55z"></path><path d="M33 72a27 27 0 1 0 54 0a27 27 0 1 0-54 0zM40 72a20 20 0 1 0 40 0a20 20 0 1 0-40 0z"></path><path d="M60 59l3.5 8.5L72 64l-3.5 8L72 80l-8.5-3.5L60 85l-3.5-8.5L48 80l3.5-8L48 64l8.5 3.5z"></path></symbol>
+<symbol id="a-set" viewBox="0 0 120 120"><path d="M26 12c0 32 14 48 34 50c20-2 34-18 34-50"></path><path d="M60 62l-6 9a7 7 0 1 0 12 0zM44 56l-4 7a5 5 0 1 0 8 0zM76 56l-4 7a5 5 0 1 0 8 0z"></path><path d="M18 86v7M18 93l-6 9a6 6 0 1 0 12 0zM102 86v7M102 93l-6 9a6 6 0 1 0 12 0z"></path></symbol>
+<symbol id="a-pendant" viewBox="0 0 120 120"><path d="M42 8l18 26 18-26"></path><path d="M57 34h6v6h-6z"></path><path d="M70 50a22 22 0 1 0 6 30a17 17 0 1 1-6-30z"></path><path d="M76 60l2 4.5 4.8.7-3.5 3.4.8 4.8-4.1-2.3-4.3 2.3.8-4.8-3.5-3.4 4.8-.7z"></path></symbol>
+<symbol id="a-butterfly" viewBox="0 0 120 120"><path d="M28 12c6 26 18 36 32 38c14-2 26-12 32-38"></path><path d="M60 62c-8-18-30-24-34-12s10 22 34 12zM60 62c8-18 30-24 34-12s-10 22-34 12z"></path><path d="M60 64c-6 10-22 22-28 14s8-16 28-14zM60 64c6 10 22 22 28 14s-8-16-28-14z"></path><path d="M60 52v26"></path></symbol>
+<symbol id="a-photo" viewBox="0 0 120 120"><path d="M22 36h18l7-10h26l7 10h18a6 6 0 0 1 6 6v46a6 6 0 0 1-6 6H22a6 6 0 0 1-6-6V42a6 6 0 0 1 6-6z"></path><path d="M44 64a16 16 0 1 0 32 0a16 16 0 1 0-32 0z"></path><path d="M52 64a8 8 0 1 0 16 0a8 8 0 1 0-16 0z"></path></symbol>
+<symbol id="a-post" viewBox="0 0 120 120"><path d="M26 18h68a6 6 0 0 1 6 6v72a6 6 0 0 1-6 6H26a6 6 0 0 1-6-6V24a6 6 0 0 1 6-6z"></path><path d="M20 74l22-20 18 16 14-12 26 22"></path><path d="M70 40a7 7 0 1 0 14 0a7 7 0 1 0-14 0z"></path></symbol>
+<symbol id="a-reel" viewBox="0 0 120 120"><path d="M38 12h44a8 8 0 0 1 8 8v80a8 8 0 0 1-8 8H38a8 8 0 0 1-8-8V20a8 8 0 0 1 8-8z"></path><path d="M52 48v24l20-12z"></path><path d="M30 28h60M30 92h60"></path></symbol>
+<symbol id="e-tasks" viewBox="0 0 96 96"><rect x="20" y="14" width="56" height="70" rx="6"></rect><path d="M36 10h24v10H36z"></path><path d="M32 40h32M32 52h24M32 64h28"></path></symbol>
+</svg>
+<div class="pw">
+<header class="row sb" style="align-items:flex-end">
+<div class="row" style="gap:18px;align-items:center"><img src="assets/img/rasta-logo.png" alt="گالری طلای رستا" style="width:88px;height:88px;border-radius:18px;display:block;box-shadow:var(--shCard)"><div style="display:flex;flex-direction:column;gap:6px"><span class="pill P-b" style="align-self:flex-start"><svg class="ic xs"><use href="#i-mobile"></use></svg>وب‌اپ قابل نصب (PWA)</span><h1 style="font-size:30px;font-weight:700;line-height:1.4">رستا روی گوشی و رایانه</h1><p class="muted" style="max-width:720px;line-height:1.9">بدون فروشگاه برنامه: از مرورگر نصب می‌شود، با لوگوی گالری روی صفحه‌ی گوشی می‌نشیند، اعلان می‌گیرد و آفلاین هم آخرین کارها را نشان می‌دهد.</p></div></div>
+<span class="xs subtle">طراحی و توسعه: سکان</span>
+</header>
+
+<section class="box" style="padding:28px 32px;display:flex;flex-direction:column;gap:22px">
+<h2 class="h2"><svg class="ic md"><use href="#i-image"></use></svg>آیکن برنامه</h2>
+<div class="icons">
+<div class="icon-c"><img class="appi" src="assets/img/rasta-logo.png" alt="آیکن ۵۱۲" style="width:200px;height:200px;border-radius:44px"><b class="num">۵۱۲ × ۵۱۲</b><span class="xs subtle">صفحه‌ی آغاز و فروشگاه</span></div>
+<div class="icon-c"><img class="appi" src="assets/img/rasta-logo.png" alt="آیکن ۱۹۲" style="width:120px;height:120px;border-radius:27px"><b class="num">۱۹۲ × ۱۹۲</b><span class="xs subtle">اندروید</span></div>
+<div class="icon-c"><div class="mask"><img src="assets/img/rasta-logo.png" alt="آیکن ماسک‌پذیر" style="width:150px;height:150px;display:block"><span class="mask-c"></span></div><b>ماسک‌پذیر</b><span class="xs subtle">نوشته داخل دایره‌ی امن</span></div>
+<div class="icon-c"><div class="hs-prev"><img class="appi" src="assets/img/rasta-logo.png" alt="" style="width:52px;height:52px;border-radius:12px"><span>رستا</span></div><b>روی صفحه‌ی گوشی</b><span class="xs subtle">نام زیر آیکن: «رستا»</span></div>
+<div class="icon-c" style="max-width:320px;align-items:flex-start;text-align:right;gap:10px"><b>قاعده‌ها</b><span class="small muted" style="line-height:1.9">همان لوگوی زرشکی گالری با کیفیت بالا؛ فقط گوشه‌ها گرد می‌شوند، بدون سایه و افکت. نوار برنامه آبیِ ترلو و صفحه‌ی آغاز سفید است.</span><div class="row" style="gap:6px"><span class="sw-dot" style="background:#0C66E4"></span><span class="sw-dot" style="background:#FFFFFF;box-shadow:inset 0 0 0 1px var(--line)"></span><span class="sw-dot" style="background:#820D1F"></span><span class="xs subtle">آبی برنامه · سفید آغاز · زرشکی لوگو</span></div></div>
+</div>
+</section>
+
+<div class="phones">
+<figure class="ph-w"><div class="ph"><div class="phs splash"><img src="assets/img/rasta-logo.png" alt="" style="width:120px;height:120px;border-radius:24px"><span class="spin"></span></div></div><figcaption class="cap"><span class="cap-n">۱</span><div><b>صفحه‌ی آغاز</b><p>سفید با لوگوی گالری در وسط؛ هنگام باز شدن از صفحه‌ی اصلی گوشی.</p></div></figcaption></figure>
+
+<figure class="ph-w"><div class="ph"><div class="phs" style="background:var(--sunken)">
+<div class="url"><svg class="ic xs" style="color:var(--ok)"><use href="#i-lock"></use></svg><span class="grow num" dir="ltr" style="text-align:left">rasta.app</span></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;padding-top:56px;gap:10px"><img src="assets/img/rasta-logo.png" alt="" style="width:76px;height:76px;border-radius:16px"><b>رستا</b></div>
+<div class="shov"><div class="shs"><div class="grab"></div>
+<div class="row" style="gap:10px"><img src="assets/img/rasta-logo.png" alt="" style="width:44px;height:44px;border-radius:10px"><b class="small" style="line-height:1.5">رستا را روی گوشی‌تان نصب کنید</b></div>
+<div class="ben"><svg class="ic xs"><use href="#i-zap"></use></svg><span><b>باز شدن سریع</b> از صفحه‌ی اصلی</span></div>
+<div class="ben"><svg class="ic xs"><use href="#i-bell"></use></svg><span><b>اعلان</b> کار تازه و برگشتی‌ها</span></div>
+<div class="ben"><svg class="ic xs"><use href="#i-wifi-off"></use></svg><span><b>آفلاین</b> هم آخرین کارها را می‌بینید</span></div>
+<span class="btn btn-p btn-w">نصب</span><span class="btn btn-s btn-w">بعداً</span>
+</div></div></div></div><figcaption class="cap"><span class="cap-n">۲</span><div><b>پیشنهاد نصب در اندروید</b><p>بار اول که پرسنل لینک را در مرورگر باز می‌کند، این برگه با آیکن و سه مزیت ظاهر می‌شود.</p></div></figcaption></figure>
+
+<figure class="ph-w"><div class="ph"><div class="phs" style="background:var(--sunken)">
+<div class="url"><svg class="ic xs" style="color:var(--ok)"><use href="#i-lock"></use></svg><span class="grow num" dir="ltr" style="text-align:left">rasta.app</span></div>
+<div class="shov"><div class="shs" style="gap:10px"><div class="grab"></div><b class="small">نصب رستا روی آیفون</b>
+<div class="ios"><span class="ios-n">۱</span><span class="grow">در سافاری دکمه‌ی «اشتراک‌گذاری» را بزنید</span><span class="ios-k"><svg class="ic xs"><use href="#i-upload"></use></svg></span></div>
+<div class="ios"><span class="ios-n">۲</span><span class="grow">«افزودن به صفحه‌ی اصلی» را انتخاب کنید</span><span class="ios-k"><svg class="ic xs"><use href="#i-plus"></use></svg></span></div>
+<div class="ios"><span class="ios-n">۳</span><span class="grow">«افزودن» را بزنید</span><img src="assets/img/rasta-logo.png" alt="" style="width:24px;height:24px;border-radius:6px"></div>
+<span class="btn btn-p btn-w">متوجه شدم</span>
+</div></div></div></div><figcaption class="cap"><span class="cap-n">۳</span><div><b>راهنمای نصب در آیفون</b><p>سافاری پیشنهاد خودکار ندارد؛ برگه‌ی سه‌مرحله‌ای کاربر را قدم‌به‌قدم می‌برد.</p></div></figcaption></figure>
+
+<figure class="ph-w"><div class="ph"><div class="phs home">
+<div class="hg">
+<span class="hi"><i style="background:#34A853"></i>تماس</span><span class="hi"><i style="background:#1A73E8"></i>پیام‌ها</span><span class="hi"><i style="background:#25D366"></i>واتساپ</span><span class="hi"><i style="background:#EA4335"></i>دوربین</span>
+<span class="hi"><i style="background:#FBBC04"></i>گالری</span><span class="hi"><i style="background:#0088CC"></i>تلگرام</span><span class="hi"><i style="background:#5F6368"></i>تنظیمات</span>
+<span class="hi"><img src="assets/img/rasta-logo.png" alt="" style="width:48px;height:48px;border-radius:12px;box-shadow:0 0 0 2px #fff,0 0 0 4px #F5CD47"><b>رستا</b></span>
+</div>
+<div class="htoast"><svg class="ic xs"><use href="#i-check"></use></svg>رستا نصب شد؛ از صفحه‌ی اصلی بازش کنید.</div>
+</div></div><figcaption class="cap"><span class="cap-n">۴</span><div><b>نصب‌شده روی صفحه‌ی اصلی</b><p>آیکن رستا کنار برنامه‌های دیگر با یک قاب زرد کوتاه برای دیده شدن بار اول.</p></div></figcaption></figure>
+
+<figure class="ph-w"><div class="ph"><div class="phs">
+<div class="pab"><img src="assets/img/rasta-logo-tile.svg" alt="" style="height:26px;border-radius:6px"><b class="grow">کارهای من</b><svg class="ic"><use href="#i-bell"></use></svg></div>
+<div class="pcnt">
+<div class="box" style="padding:10px;display:flex;flex-direction:column;gap:8px"><div class="row sb"><b class="small">گزارش امروز</b><span class="pill P-ys" style="height:20px">۱ کار بی‌وضعیت</span></div>
+<span class="xs subtle">گردنبند اسم با خط نستعلیق</span>
+<div class="dr" style="gap:4px"><span class="drb" style="height:28px;font-size:11px;padding:0 8px"><i class="dot-g"></i>طبق برنامه</span><span class="drb" style="height:28px;font-size:11px;padding:0 8px"><i class="dot-y"></i>کمی عقبم</span><span class="drb" style="height:28px;font-size:11px;padding:0 8px"><i class="dot-r"></i>گیر کرده‌ام</span></div></div>
+<article class="card"><div class="cb"><div class="lbls"><span class="lbl L-o">اصلاحی</span></div><div class="ctitle">النگوی طرح‌دار گل و بوته</div><div class="bdgs"><span class="bdg"><svg class="ic xs"><use href="#i-clock"></use></svg>۲۹ مهر</span><span class="bdg"><svg class="ic xs"><use href="#i-check-sq"></use></svg>۰/۲</span></div></div></article>
+<article class="card"><div class="cb"><div class="ctitle">گردنبند اسم با خط نستعلیق</div><div class="bdgs"><span class="bdg soon"><svg class="ic xs"><use href="#i-clock"></use></svg>۲۷ مهر</span><span class="bdg"><svg class="ic xs"><use href="#i-check-sq"></use></svg>۱/۳</span></div></div></article>
+</div>
+<div class="pnav"><span class="on"><svg class="ic"><use href="#i-card"></use></svg>کارهای من</span><span><svg class="ic"><use href="#i-award"></use></svg>امتیاز</span><span><svg class="ic"><use href="#i-bell"></use></svg>اعلان‌ها</span></div>
+</div></div><figcaption class="cap"><span class="cap-n">۵</span><div><b>تمام‌صفحه، بدون نوار مرورگر</b><p>با زدن آیکن، بعد از صفحه‌ی آغاز «کارهای من» با گزارش یک‌ضربه‌ای باز می‌شود.</p></div></figcaption></figure>
+
+<figure class="ph-w"><div class="ph"><div class="phs">
+<div class="pab"><img src="assets/img/rasta-logo-tile.svg" alt="" style="height:26px;border-radius:6px"><b class="grow">کارهای من</b><svg class="ic"><use href="#i-bell"></use></svg></div>
+<div class="banner" style="padding:8px 12px;font-size:12px;line-height:1.7"><svg class="ic xs"><use href="#i-wifi-off"></use></svg>اتصال برقرار نیست؛ تغییرات پس از اتصال ارسال می‌شوند.</div>
+<div class="pcnt" style="opacity:.9">
+<article class="card"><div class="cb"><div class="lbls"><span class="lbl L-o">اصلاحی</span></div><div class="ctitle">النگوی طرح‌دار گل و بوته</div><div class="bdgs"><span class="bdg"><svg class="ic xs"><use href="#i-clock"></use></svg>۲۹ مهر</span></div></div></article>
+<article class="card"><div class="cb"><div class="ctitle">گردنبند اسم با خط نستعلیق</div><div class="bdgs"><span class="bdg soon"><svg class="ic xs"><use href="#i-clock"></use></svg>۲۷ مهر</span></div></div></article>
+<p class="xs subtle" style="text-align:center">آخرین به‌روزرسانی: امروز، ۱۱:۲۰</p>
+</div>
+<div class="pnav"><span class="on"><svg class="ic"><use href="#i-card"></use></svg>کارهای من</span><span><svg class="ic"><use href="#i-award"></use></svg>امتیاز</span><span><svg class="ic"><use href="#i-bell"></use></svg>اعلان‌ها</span></div>
+</div></div><figcaption class="cap"><span class="cap-n">۶</span><div><b>حالت آفلاین</b><p>بنر زرد آرام؛ کارها از آخرین اطلاعات نمایش داده می‌شوند.</p></div></figcaption></figure>
+
+<figure class="ph-w" style="grid-column:span 2"><div class="desk">
+<div class="desk-top"><img src="assets/img/rasta-logo-tile.svg" alt="" style="height:30px;border-radius:6px"><span class="btn btn-s">تابلوها</span><span class="btn btn-p" style="height:28px">ایجاد</span><span class="grow"></span><span class="av" style="background:#0055CC">م‌ک</span></div>
+<div class="desk-b"><div class="dl"><b class="small">صف</b><span class="dc"></span><span class="dc"></span></div><div class="dl"><b class="small">اسکچ</b><span class="dc"></span><span class="dc"></span><span class="dc"></span></div><div class="dl"><b class="small">سه‌بعدی</b><span class="dc"></span></div></div>
+<div class="dmenu"><span class="mi"><svg class="ic"><use href="#i-moon"></use></svg>پوسته‌ی تیره</span><span class="mi" style="background:var(--blueS);color:var(--blue);font-weight:600"><svg class="ic"><use href="#i-monitor"></use></svg>نصب برنامه روی رایانه</span><span class="mi"><svg class="ic"><use href="#i-mobile"></use></svg>نصب روی گوشی</span><span class="msep"></span><span class="mi dan"><svg class="ic"><use href="#i-logout"></use></svg>خروج</span></div>
+</div><figcaption class="cap"><span class="cap-n">۷</span><div><b>نصب روی رایانه</b><p>در نسخه‌ی دسکتاپ، «نصب برنامه روی رایانه» در منوی حساب؛ مدیر رستا را مثل یک برنامه‌ی مستقل باز می‌کند.</p></div></figcaption></figure>
+</div>
+</div>
+</div>
+</body>
+</html>
