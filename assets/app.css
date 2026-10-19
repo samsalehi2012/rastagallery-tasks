@@ -301,7 +301,10 @@ select.inp{padding:0 8px}
 .tr .addlist-b{width:100%;height:44px;border-radius:12px;border:0;background:rgba(255,255,255,.24);color:#fff;font:inherit;font-weight:600;display:flex;align-items:center;gap:8px;padding:0 14px;cursor:pointer}
 .addlist-b:hover{background:rgba(255,255,255,.34)}
 .addlist-f{background:var(--list);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shCard)}
-.tbdg{background:var(--purpleS);color:var(--purpleT)}
+.tbdg,.bdg.tb-in{background:var(--purpleS);color:var(--purpleT)}
+.bdg.tb-doing{background:var(--blueS);color:var(--blue)}
+.bdg.tb-done{background:var(--okS);color:var(--okT)}
+.bdg.tb-x{background:var(--warnS);color:var(--warnT)}
 .fchips{display:flex;flex-wrap:wrap;gap:6px}
 .fchip{display:inline-flex;align-items:center;gap:2px;background:var(--btn);border-radius:6px;max-width:100%}
 .tr .fchip-b{display:inline-flex;align-items:center;gap:6px;border:0;background:none;padding:4px 8px 4px 4px;cursor:pointer;font:inherit;font-size:12px;color:var(--text);min-width:0}
@@ -425,6 +428,16 @@ select.inp{padding:0 8px}
 .spin{width:28px;height:28px;border-radius:50%;border:3px solid #E9F2FF;border-top-color:#0C66E4;animation:spin .9s linear infinite}
 .screen .btn{min-height:40px}.screen .btn.btn-s{min-height:36px}.screen .drb{height:38px}
 @keyframes sup{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+.chipsep{width:1px;align-self:stretch;margin:4px 2px;background:rgba(255,255,255,.45);flex:none}
+.chiprow .btn .ic{width:16px;height:16px}
+.tr .mteam{display:flex;flex-direction:column;gap:8px;margin:0 8px 6px;padding:10px 12px;border:0;border-radius:10px;background:var(--card);box-shadow:var(--shCard);font:inherit;color:var(--text);text-align:right;cursor:pointer}
+.mteam-h{display:flex;align-items:center;gap:8px;color:var(--blue)}
+.mteam-h b{font-size:14px}
+.mteam-h .xs{color:var(--text3)}
+.mteam-cols{display:flex;flex-wrap:wrap;gap:6px}
+.mteam-c{display:inline-flex;align-items:center;gap:5px;height:26px;padding:0 8px;border-radius:999px;background:var(--btn);font-size:12px;color:var(--text2)}
+.mteam-c i{width:8px;height:8px;border-radius:50%;display:block}
+.mteam-c b{font-weight:600;color:var(--text)}
 
 /* ===== web build ===== */
 html,body{margin:0;padding:0}
