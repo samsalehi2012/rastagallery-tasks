@@ -1,7 +1,7 @@
 /* رستا — service worker: works offline, always loads the newest version when online */
-const VER = 'rasta-v3-56514';
+const VER = 'rasta-29836';
 const FILES = ["./", "index.html", "install.html", "guide.html", "manifest.webmanifest", "assets/app.css", "assets/app.js", "assets/morphdom.min.js", "assets/fonts/Vazirmatn-Variable.woff2", "assets/img/apple-touch-icon.png", "assets/img/favicon-32.png", "assets/img/icon-192.png", "assets/img/icon-512.png", "assets/img/icon-maskable-512.png", "assets/img/rasta-logo-inverse.svg", "assets/img/rasta-logo-tile.svg", "assets/img/rasta-logo.png"];
-const SKIP = ['paths/'];
+const SKIP = [];
 self.addEventListener('install', e => { e.waitUntil(caches.open(VER).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== VER).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('message', e => { if (e.data === 'skip') self.skipWaiting(); });
